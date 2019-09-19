@@ -24,4 +24,3 @@ else
 	colorscheme seoul256
 endif
 let g:airline_theme='zenburn'
-

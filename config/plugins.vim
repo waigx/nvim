@@ -5,15 +5,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'sjl/gundo.vim'
-Plug 'vim-syntastic/syntastic'
 Plug 'majutsushi/tagbar'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'will133/vim-dirdiff'
-Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
-Plug 'junegunn/seoul256.vim'
 Plug 'szw/vim-maximizer'
-Plug 'drmingdrmer/vim-syntax-markdown'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'google/vim-searchindex'
 Plug 'tpope/vim-fugitive'
@@ -25,6 +19,10 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 
+"""""""""""""""""""""""""
+"Language supports
+Plug 'vim-syntastic/syntastic'
+Plug 'drmingdrmer/vim-syntax-markdown'
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2-bufword'
@@ -37,14 +35,24 @@ Plug 'ncm2/ncm2-neoinclude' | Plug 'Shougo/neoinclude.vim'
 Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax'
 Plug 'ncm2/ncm2-jedi'
 Plug 'ncm2/ncm2-pyclang'
-"""""""""""""""""""""""""
-"Optional ts/js support
 Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+Plug 'heavenshell/vim-jsdoc'
+
+"""""""""""""""""""""""""
+"Themes
+Plug 'ryanoasis/vim-devicons'
+Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
+Plug 'junegunn/seoul256.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
+
+"""""""""""""""""""""""""
+"Plugin Configurations
 source $HOME/.config/nvim/config/plugins/airline.vim
 source $HOME/.config/nvim/config/plugins/comfortable-motion.vim
 source $HOME/.config/nvim/config/plugins/fzf.vim
