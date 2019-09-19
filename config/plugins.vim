@@ -42,11 +42,11 @@ Plug 'heavenshell/vim-jsdoc'
 
 """""""""""""""""""""""""
 "Themes
-Plug 'ryanoasis/vim-devicons'
-Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
-Plug 'junegunn/seoul256.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
+Plug 'junegunn/seoul256.vim'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
