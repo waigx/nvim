@@ -4,7 +4,12 @@
 let g:python3_host_prog = $HOME.'/.local/share/pyenv/python3/bin/python'
 
 "Enable libclang autocomplete
-let g:ncm2_pyclang#library_path = '/usr/lib/llvm-7/lib/libclang-7.so.1'
+"For OS X
+if g:uname == "Darwin"
+	let g:ncm2_pyclang#library_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
+else
+	let g:ncm2_pyclang#library_path = '/usr/lib/llvm-7/lib/libclang-7.so.1'
+endif
 
 "enable ncm2 for all buffers
 autocmd BufEnter * call ncm2#enable_for_buffer()
