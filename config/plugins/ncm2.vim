@@ -24,7 +24,6 @@ let g:ncm2_path#cwdpath_source = {'mark': ''}
 let g:ncm2_path#rootpath_source = {'mark': 'פּ'}
 let g:ncm2_look#source = {'mark': '龎'}
 let g:ncm2_tmux#source = {'mark': 'TMUX'}
-let g:ncm2_vim#source = {'mark': ''}
 let g:ncm2_neoinclude#source = {'mark': ''}
 let g:ncm2_syntax#source = {'mark': ''}
 let g:ncm2_pyclang#source = {'mark': 'ﭱ'}

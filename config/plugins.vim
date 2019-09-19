@@ -22,6 +22,7 @@ Plug 'junegunn/rainbow_parentheses.vim'
 """""""""""""""""""""""""
 "Language supports
 Plug 'vim-syntastic/syntastic'
+Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'drmingdrmer/vim-syntax-markdown'
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
