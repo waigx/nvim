@@ -25,7 +25,7 @@ map <leader>ck :SyntasticCheck<CR>
 "Map 'Spell Checking'
 map <leader>sc :call SpellCheckToggle()<CR>
 "Map ctrl+p to search files
-map <C-p> :FZF<CR>
+map <C-p> :call ListAllFiles()<CR>
 "Map ctrl+b to search buffers
 map <C-b> :call ShowAllBuffers()<CR>
 "Map ctrl+e in insert mode to execute cmd

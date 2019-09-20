@@ -19,7 +19,8 @@ set nocursorline
 set nocursorcolumn
 "Set indent guide
 set list
-set listchars=tab:┊\ 
+"set listchars=tab:┊\ 
+set expandtab
 
 "help window open on right
 autocmd FileType help wincmd L

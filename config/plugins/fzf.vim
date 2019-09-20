@@ -9,15 +9,26 @@ set rtp+=~/.fzf
 "fzf layout
 let g:fzf_layout = { 'left': '~55%' }
 
+function! GetDevIcon(path)
+	let filename = fnamemodify(a:path, ':p:t')
+	return WebDevIconsGetFileTypeSymbol(filename, isdirectory(filename))
+endfunction
+
+function! EditDevIconPath(iconPath)
+    let firstSpc = stridx(a:iconPath, ' ')
+    let path = a:iconPath[firstSpc+1:]
+    execute 'silent e' path
+endfunction
+
 "Add function for searching certain word
 function! SearchWordInDirectory(word)
 	echo 'Searching: ' . a:word
 	let @/ =a:word
 	let word="'" . a:word . "'"
 	call fzf#run({
-\		'source': 'ag -l ' . word,
-\		'options': '--preview="pygmentize -g {} | ag --color --passthru ' . word . '"',
-\		'sink': 'e',
+\		'source': map(split(system('ag -l ' . word), '\n'), 'GetDevIcon(v:val) . " " . v:val'),
+\		'options': '--preview="bat --style=numbers --color=always {2..-1} | ag --color --passthru ' . word . '"',
+\		'sink': function('EditDevIconPath'),
 \	})
 endfunction
 
@@ -32,4 +43,13 @@ function! ShowAllBuffers()
 	call fzf#run(fzf#wrap({
 \		'source': map(range(1, bufnr('$')), 'bufname(v:val)'),
 \	}))
+endfunction
+
+"FZF with DevIcons
+function! ListAllFiles()
+	call fzf#run({
+\		'source': map(split(system('ag -l -g ""'), '\n'), 'GetDevIcon(v:val) . " " . v:val'),
+\		'options': '--preview="bat --style=numbers --color=always {2..-1}"',
+\		'sink': function('EditDevIconPath'),
+\	})
 endfunction
