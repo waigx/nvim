@@ -23,4 +23,4 @@ else
 	"colorscheme Tomorrow-Night-Eighties
 	colorscheme seoul256
 endif
-let g:airline_theme='zenburn'
+let g:airline_theme='bubblegum'

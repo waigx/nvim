@@ -27,7 +27,7 @@ function! SearchWordInDirectory(word)
 	let word="'" . a:word . "'"
 	call fzf#run({
 \		'source': map(split(system('ag -l ' . word), '\n'), 'GetDevIcon(v:val) . " " . v:val'),
-\		'options': '--preview="bat --style=numbers --color=always {2..-1} | ag --color --passthru ' . word . '"',
+\		'options': '--preview="bat --style=numbers --theme=zenburn --color=always {2..-1} | ag --color --passthru ' . word . '"',
 \		'sink': function('EditDevIconPath'),
 \	})
 endfunction
@@ -49,7 +49,7 @@ endfunction
 function! ListAllFiles()
 	call fzf#run({
 \		'source': map(split(system('ag -l -g ""'), '\n'), 'GetDevIcon(v:val) . " " . v:val'),
-\		'options': '--preview="bat --style=numbers --color=always {2..-1}"',
+\		'options': '--preview="bat --style=numbers --theme=zenburn --color=always {2..-1}"',
 \		'sink': function('EditDevIconPath'),
 \	})
 endfunction
