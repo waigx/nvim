@@ -11,7 +11,10 @@ let g:fzf_layout = { 'left': '~55%' }
 
 function! GetDevIcon(path)
 	let filename = fnamemodify(a:path, ':p:t')
-	return WebDevIconsGetFileTypeSymbol(filename, isdirectory(filename))
+	if isdirectory(a:path)
+		return 'פּ'
+	endif
+	return WebDevIconsGetFileTypeSymbol(filename, isdirectory(a:path))
 endfunction
 
 function! EditDevIconPath(iconPath)
@@ -48,8 +51,8 @@ endfunction
 "FZF with DevIcons
 function! ListAllFiles()
 	call fzf#run({
-\		'source': map(split(system('ag -l -g ""'), '\n'), 'GetDevIcon(v:val) . " " . v:val'),
-\		'options': '--preview="bat --style=numbers --theme=zenburn --color=always {2..-1}"',
+\		'source': map(split(system('find . ! -path "." ! -path "*/\.*" -type d -printf "%P/\n"; ag -l -g ""'), '\n'), 'GetDevIcon(v:val) . " " . v:val'),
+\		'options': '--preview="bat --style=numbers --theme=zenburn --color=always {2..-1} 2>/dev/null || exa -al --color=always {2..-1}"',
 \		'sink': function('EditDevIconPath'),
 \	})
 endfunction
