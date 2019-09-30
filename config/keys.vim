@@ -32,6 +32,8 @@ map <leader>p :call ListAllDirs()<CR>
 map <C-b> :call ShowAllBuffers()<CR>
 "Map ctrl+e in insert mode to execute cmd
 imap <C-e> <esc>:call ExecuteCurrentLine()<CR>i
+"Map ctrl+] for typescript file
+autocmd FileType typescript,typescript.tsx nnoremap <C-]> :TSDef<CR>
 
 "Map shortcuts for NERDTree
 map <leader>ff :NERDTreeTabsToggle<CR>
