@@ -25,7 +25,7 @@ function! SearchWordInDirectory(word)
 	let @/ =a:word
 	let word="'" . a:word . "'"
 	call fzf#run({
-\		'source': map(split(system('ag -l ' . word), '\n'), 'GetDevIcon(v:val) . " " . v:val'),
+\		'source': map(systemlist('ag -l ' . word), 'GetDevIcon(v:val) . " " . v:val'),
 \		'options': '--preview="bat --style=numbers --theme=zenburn --color=always {2..-1} | ag --color --passthru ' . word . '"',
 \		'sink': function('EditDevIconPath'),
 \	})
@@ -47,7 +47,7 @@ endfunction
 "FZF with DevIcons
 function! ListAllFiles()
 	call fzf#run({
-\		'source': map(split(system('ag -l -g ""'), '\n'), 'GetDevIcon(v:val) . " " . v:val'),
+\		'source': map(systemlist('ag -l -g ""'), 'GetDevIcon(v:val) . " " . v:val'),
 \		'options': '--preview="bat --style=numbers --theme=zenburn --color=always {2..-1}"',
 \		'sink': function('EditDevIconPath'),
 \	})
