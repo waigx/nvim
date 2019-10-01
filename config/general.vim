@@ -13,6 +13,7 @@ set shiftwidth=4
 set softtabstop=4
 syntax on
 set smartindent
+set noincsearch
 "Set search/line/column highlight
 set nohlsearch
 set nocursorline
