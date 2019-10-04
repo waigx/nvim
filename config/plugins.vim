@@ -18,8 +18,8 @@ Plug 'szw/vim-maximizer', {'on': 'MaximizerToggle'}
 Plug 'junegunn/gv.vim', {'on': 'GV'}
 Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
 Plug 'junegunn/limelight.vim', {'on': 'Limelight'}
-Plug 't9md/vim-choosewin'
 Plug 'liuchengxu/vim-clap'
+Plug 't9md/vim-choosewin'
 
 """""""""""""""""""""""""
 "Language supports
