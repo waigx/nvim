@@ -4,18 +4,13 @@
 "Set leader
 let mapleader = ","
 
-"Map shortcuts for highlight search and cursor
-map <leader><space> :set hlsearch! cursorcolumn! cursorline!<CR>
+"Map toggle for highlight search and cursor
+map <leader>h :set hlsearch! cursorcolumn! cursorline!<CR>
 "Map shortcuts for fzf search word
 map <leader>* :call SearchCurrentWord()<CR>
 "Map tab shortcuts
 map <leader>n :tabe<CR>
 map <leader>t :tabe<CR>
-"Map shortcuts for close opeations
-map <leader>q :qa<CR>
-map <leader>w :q<CR>
-map <leader>`q :qa!<CR>
-map <leader>`w :q!<CR>
 "Map shortcuts for Maxmize and restore a window
 map <leader>m :MaximizerToggle<CR>
 "Map shortcuts for Tagbar
@@ -25,15 +20,13 @@ map <leader>ck :SyntasticCheck<CR>
 "Map 'Spell Checking'
 map <leader>sc :call SpellCheckToggle()<CR>
 "Map ctrl+p to search files
-map <C-p> :call ListAllFiles()<CR>
+nmap <C-p> :call ListAllFiles()<CR>
 "Map leader+p to search directories
-map <leader>p :call ListAllDirs()<CR>
+nmap <leader>p :call ListAllDirs()<CR>
 "Map ctrl+b to search buffers
-map <C-b> :call ShowAllBuffers()<CR>
+nmap <C-b> :call ShowAllBuffers()<CR>
 "Map ctrl+e in insert mode to execute cmd
 imap <C-e> <esc>:call ExecuteCurrentLine()<CR>i
-"Map ctrl+] for typescript file
-autocmd FileType typescript,typescript.tsx nnoremap <C-]> :TSDef<CR>
 
 "Map shortcuts for NERDTree
 map <leader>ff :NERDTreeTabsToggle<CR>
@@ -52,6 +45,16 @@ imap <C-f> <Right>
 "Map 'Undo Graphic'
 let g:gundo_prefer_python3 = 1
 map <leader>z :GundoToggle<CR>
+
+"Map ctrl+] for typescript file
+autocmd FileType typescript,typescript.tsx nnoremap <C-]> :TSDef<CR>
+"Map 'JsDoc'
+map <leader>j :JsDoc<CR>
+"Map Auto Lint Fix
+map <leader>f :ALEFix<CR>
+
+"Map '-' for choosewin
+nmap  -  <Plug>(choosewin)
 
 "Map Run Current Script
 map <leader>e :call append(line(0), "#!/usr/bin/env " . &filetype)<CR>

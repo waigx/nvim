@@ -5,6 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'google/vim-searchindex'
 Plug 'tpope/vim-fugitive'
@@ -17,10 +18,13 @@ Plug 'szw/vim-maximizer', {'on': 'MaximizerToggle'}
 Plug 'junegunn/gv.vim', {'on': 'GV'}
 Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
 Plug 'junegunn/limelight.vim', {'on': 'Limelight'}
+Plug 't9md/vim-choosewin'
+Plug 'liuchengxu/vim-clap'
 
 """""""""""""""""""""""""
 "Language supports
 Plug 'vim-syntastic/syntastic'
+Plug 'dense-analysis/ale'
 Plug 'martinda/Jenkinsfile-vim-syntax', {'for': 'Jenkinsfile'}
 Plug 'drmingdrmer/vim-syntax-markdown', {'for': 'markdown'}
 Plug 'ncm2/ncm2'
@@ -59,4 +63,5 @@ source $HOME/.config/nvim/config/plugins/comfortable-motion.vim
 source $HOME/.config/nvim/config/plugins/fzf.vim
 source $HOME/.config/nvim/config/plugins/ncm2.vim
 source $HOME/.config/nvim/config/plugins/nerdtree.vim
-source $HOME/.config/nvim/config/plugins/rainbowparentheses.vim
+source $HOME/.config/nvim/config/plugins/rainbow_parentheses.vim
+source $HOME/.config/nvim/config/plugins/vim-choosewin.vim
