@@ -39,10 +39,10 @@ Plug 'ncm2/ncm2-neoinclude' | Plug 'Shougo/neoinclude.vim'
 Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax'
 Plug 'ncm2/ncm2-jedi', {'for': 'python'}
 Plug 'ncm2/ncm2-pyclang', {'for': ['c', 'cpp']}
-Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'heavenshell/vim-jsdoc'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh', 'for': ['typescript', 'typescript.tsx']}
+"Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
+"Plug 'HerringtonDarkholme/yats.vim'
+"Plug 'mhartington/nvim-typescript', {'do': './install.sh', 'for': ['typescript', 'typescript.tsx']}
+"Plug 'heavenshell/vim-jsdoc'
 
 """""""""""""""""""""""""
 "Themes
