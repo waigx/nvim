@@ -18,8 +18,8 @@ Plug 'szw/vim-maximizer', {'on': 'MaximizerToggle'}
 Plug 'junegunn/gv.vim', {'on': 'GV'}
 Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
 Plug 'junegunn/limelight.vim', {'on': 'Limelight'}
-Plug 'liuchengxu/vim-clap'
 Plug 't9md/vim-choosewin'
+Plug 'liuchengxu/vim-clap'
 
 """""""""""""""""""""""""
 "Language supports
@@ -53,6 +53,8 @@ Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
 Plug 'junegunn/seoul256.vim'
 Plug 'ryanoasis/vim-devicons'
 
+Plug 'sotte/presenting.vim'
+
 call plug#end()
 
 
@@ -64,4 +66,5 @@ source $HOME/.config/nvim/config/plugins/fzf.vim
 source $HOME/.config/nvim/config/plugins/ncm2.vim
 source $HOME/.config/nvim/config/plugins/nerdtree.vim
 source $HOME/.config/nvim/config/plugins/rainbow_parentheses.vim
+source $HOME/.config/nvim/config/plugins/presenting.vim
 source $HOME/.config/nvim/config/plugins/vim-choosewin.vim

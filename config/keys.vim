@@ -33,8 +33,6 @@ map <leader>ff :NERDTreeTabsToggle<CR>
 map <leader>f :NERDTreeTabsFind<CR>
 
 "Map shortcuts for distraction free mode
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
 map <leader>d :Goyo<CR>
 map <leader>l :Limelight!!<CR>
 
@@ -55,6 +53,9 @@ map <leader>f :ALEFix<CR>
 
 "Map '-' for choosewin
 nmap  -  <Plug>(choosewin)
+
+"Map F5 to toggle presenting mode
+autocmd FileType rst,markdown nnoremap <F5> :call TogglePresenting()<CR>
 
 "Map Run Current Script
 map <leader>e :call append(line(0), "#!/usr/bin/env " . &filetype)<CR>
