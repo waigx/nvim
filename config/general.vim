@@ -20,7 +20,7 @@ set nocursorline
 set nocursorcolumn
 "Set indent guide
 set list
-"set listchars=tab:┊\ 
+set listchars=tab:┊\ ,trail:·
 set expandtab
 
 "help window open on right

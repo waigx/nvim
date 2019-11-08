@@ -36,6 +36,9 @@ map <leader>f :NERDTreeTabsFind<CR>
 map <leader>d :Goyo<CR>
 map <leader>l :Limelight!!<CR>
 
+"Map clap
+map <leader><Space> :Clap<CR>
+
 "Map ctrl+b/f in insert mode to navigate
 imap <C-b> <Left>
 imap <C-f> <Right>
