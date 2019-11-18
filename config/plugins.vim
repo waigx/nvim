@@ -42,7 +42,7 @@ Plug 'ncm2/ncm2-pyclang', {'for': ['c', 'cpp']}
 Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'heavenshell/vim-jsdoc'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh', 'for': ['typescript', 'typescript.tsx']}
+Plug 'mhartington/nvim-typescript', {'do': './install.sh', 'for': ['typescript', 'typescriptreact', 'typescript.tsx']}
 
 """""""""""""""""""""""""
 "Themes
