@@ -80,3 +80,4 @@ source $HOME/.config/nvim/config/plugins/nerdtree.vim
 source $HOME/.config/nvim/config/plugins/rainbow_parentheses.vim
 source $HOME/.config/nvim/config/plugins/presenting.vim
 source $HOME/.config/nvim/config/plugins/vim-choosewin.vim
+source $HOME/.config/nvim/config/plugins/vim-clap.vim
