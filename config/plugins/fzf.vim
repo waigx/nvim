@@ -8,7 +8,7 @@ endif
 set rtp+=~/.fzf
 
 "fzf window size and position
-let g:fzf_layout = {'down': '40%'}
+let g:fzf_layout = {'down': '45%'}
 
 function! GetDevIcon(path)
 	return WebDevIconsGetFileTypeSymbol(a:path, isdirectory(a:path))

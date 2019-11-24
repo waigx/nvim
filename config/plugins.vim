@@ -39,10 +39,10 @@ Plug 'ncm2/ncm2-neoinclude' | Plug 'Shougo/neoinclude.vim'
 Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax'
 Plug 'ncm2/ncm2-jedi', {'for': 'python'}
 Plug 'ncm2/ncm2-pyclang', {'for': ['c', 'cpp']}
-"Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
-"Plug 'HerringtonDarkholme/yats.vim'
-"Plug 'mhartington/nvim-typescript', {'do': './install.sh', 'for': ['typescript', 'typescript.tsx']}
-"Plug 'heavenshell/vim-jsdoc'
+Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'heavenshell/vim-jsdoc'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh', 'for': ['typescript', 'typescriptreact', 'typescript.tsx']}
 
 """""""""""""""""""""""""
 "Themes
@@ -80,3 +80,4 @@ source $HOME/.config/nvim/config/plugins/nerdtree.vim
 source $HOME/.config/nvim/config/plugins/rainbow_parentheses.vim
 source $HOME/.config/nvim/config/plugins/presenting.vim
 source $HOME/.config/nvim/config/plugins/vim-choosewin.vim
+source $HOME/.config/nvim/config/plugins/vim-clap.vim
